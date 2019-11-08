@@ -39,15 +39,20 @@ h1 a span {
     right: 2px;
 }
 
-h2 {
+h2, h3 {
     font-size: 1.2em;
     margin-bottom: 0.5em;;
 }
 
-p.subtitle {
+p.centered-subtitle {
     text-align: center;
     font-size: 1.2em;
 }
+
+p.subtitle {
+    font-size: 1.2em;
+}
+
 
 /* HEADER */
 
@@ -120,14 +125,6 @@ main {
     color: #fff;
 }
 
-.small {
-    
-}
-
-.big {
-    
-}
-
 .functional {
     background-image: url(img/landing-first-background.png);
 }
@@ -144,14 +141,61 @@ main {
     background-image: url(img/autumn-clothes.jpg);
 }
 
-.new-arrivals {
-    background-color: yellow;
+/* SECTION NEW ARRIVALS */
+
+section.new-arrivals {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 1.3em;
+    grid-row-gap: 1em;
 }
+
+.pictures-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+figure {
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    padding-left: 0.8em;;
+    margin-bottom: 1em;
+}
+
+figcaption{
+    padding: 0.5em 0 0 0.5em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+img.new-arrival-picture {
+    width: 90%;
+    height: auto;
+}
+
+.explore-arrivals {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(150, 150, 150);
+    margin: 0 auto;
+    padding: 0.8em;
+}
+
+/* SECTION ABOUT */
+
 .about {
-    background-color: green;
+    
 }
+
+
+
+/* FOOTER */
+
 footer {
-    background-color: grey;
+    background-color: green;
 }
 
 }
