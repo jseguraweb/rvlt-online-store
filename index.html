@@ -12,11 +12,19 @@
 
 <body class="wrapper">
     <header>
-        <button id="navbar-button">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </button>
+        <nav>
+            <button id="navbar-button" onclick="toggleNavBar()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <ul id="toggle-bar">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">LOGIN</a></li>
+            </ul>
+        </nav>
         <h1><a href="#">RVLT<span>TM</span> REVOLUTION</a></h1>
         <div id="desktop-menu">
             <ul>
@@ -173,6 +181,10 @@
             &copy2019 Revolution. All rights reserved.
         </p>
     </footer>
+    <script>
+        const navBar = document.getElementById("toggle-bar");
+        const toggleNavBar = () => navBar.style.display === "grid" ? navBar.style.display = "none" : navBar.style.display = "grid";
+    </script>
 </body>
 
 </html>
