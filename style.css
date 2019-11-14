@@ -19,6 +19,10 @@ a {
 
 @media screen and (max-width: 576px) {
 
+    html {
+        font-size: 100%;
+    }
+
 /* TYPOGRAPHY */
 
 h1 {
@@ -90,6 +94,10 @@ header {
     padding: 1em 0;
 }
 
+#desktop-menu {
+    display: none;
+}
+
 #navbar-button {
     background-color: transparent;
     border-color: transparent;
@@ -106,6 +114,10 @@ header {
 #shopping-cart {
     width: 20px;
     height: auto;
+}
+
+#icons-container {
+    display: none;
 }
 
 
@@ -175,6 +187,10 @@ section.new-arrivals {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+}
+
+.pictures-wrapper>figure:nth-last-of-type(-n+2) {
+    display: none;
 }
 
 figure {
@@ -265,21 +281,22 @@ img#hexagon {
 }
 }
 
-/*-------- DESKTOP -------*/
+/*---------------- DESKTOP ------------------*/
 
 @media screen and (min-width: 576px) {
+
 
 /* TYPOGRAPHY */
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9em;
-    justify-self: start;
+    font-size: 1.6em;
+    justify-self: center;
     letter-spacing: 0.1em;
 }
 
 h1 a {
-    font-weight: 700;
+    font-weight: 800;
 }
 
 h1 a span {
@@ -290,8 +307,21 @@ h1 a span {
 }
 
 h2, h3 {
-    font-size: 1.2em;
+    font-size: 1.5rem;
     margin-bottom: 0.5em;;
+}
+
+#main-h2 {
+    font-size: 3rem;
+}
+
+#desktop-menu ul li {
+    font-size: 0.8rem;
+    margin: 0 1rem;
+}
+
+#desktop-menu ul li a:hover{
+    text-decoration: underline;
 }
 
 .first a {
@@ -305,7 +335,7 @@ p {
 
 p.centered-subtitle {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 2.5rem;
 }
 
 p.subtitle {
@@ -331,11 +361,12 @@ body .wrapper {
 
 header {
     position: absolute;
+    width: 100%;
     background-color: transparent;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr;
     align-items: center;
-    justify-items: center;
     padding: 1rem;
 }
 
@@ -343,11 +374,36 @@ header {
     display: none;
 }
 
-#shopping-cart {
+#desktop-menu {
+    justify-self: flex-start;
+}
+
+#desktop-menu ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-self: flex-start;
+}
+
+.mini-icon {
     width: 20px;
     height: auto;
 }
 
+#icons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.4rem;
+    justify-self: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+#shopping-cart {
+    display: none;
+}
 
 /* MAIN */
 
@@ -415,7 +471,7 @@ section.new-arrivals {
 
 .pictures-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -479,10 +535,6 @@ img.new-arrival-picture {
 .nearest-shop {
     grid-column: 2/3;
     grid-row: 5/7;
-}
-
-.text {
-
 }
 
 .text,
